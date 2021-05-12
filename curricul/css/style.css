@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+}
+#bg_menu{
+    position: relative;
+    background-image: url("../assets/menubar.jpg");
+    background-size: cover;
+    overflow:hidden;
+    height:50px;
+}
+
+.menu{
+    padding-right: 5px;
+    
+    float:right;
+    list-style: none;
+}
+.logo{
+    display: block;
+    padding-top: 15px;
+    padding-left: 10px;
+    position: fixed;
+}
+li{
+    /*background-color: cadetblue;*/
+    padding-top: 15px;
+    padding-right: 10px;
+    display: inline-block;
+}
+#git{
+    fill: black;
+}
