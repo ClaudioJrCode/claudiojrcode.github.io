@@ -79,6 +79,7 @@ select {
     margin-bottom: 20px;
 }
 footer{
+    vertical-align: middle;
     text-align: center;
     padding:40px;
     
@@ -88,6 +89,19 @@ footer{
         max-width: 70%;
         float: none;
         margin: auto;
+    }
+    .picture{
+        
+        width:70%;
+    }
+    .description{
+        margin: 0;
+        max-width: 80%
+    }
+    .description p, .description h3{
+        text-align: center;
+
+
     }
 
 }
