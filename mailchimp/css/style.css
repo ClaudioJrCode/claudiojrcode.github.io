@@ -42,13 +42,13 @@ input, select{/*nome, e-mail e o select de estado*/
 }
 input[type="submit"]{
     border-radius: 8px;
-    transition: .5s;
+    transition: all .5s;
     color: white;
     background-color: #48c5ce;
     font-weight: bold;
 }
 input[type="submit"]:hover{
-    transition: .5s;
+    transition: all .5s;
     color: #48c5ce;
     background-color: white ;
     
@@ -72,21 +72,26 @@ select {
     
 }
 .picture{
-    transition: .5s;
+    transition: all .5s;
     position: relative;
     border-radius: 1em;
-    width: 160px;
+    width: 250px;
+    
 
 }
-.picture:hover{
+.picture:hover {
+   
+    background-position: center, center;
+    transition: all .5s;
+    transform: scale(1.20);
     
-    transition: .5s;
-    width: 300px;
+    
 }
+
 .description{
     display: inline-block;
     max-width: 40%;
-    margin-left: 20px;
+    margin-left: 40px;
     
 }
 .description p, .description h3{
@@ -122,9 +127,6 @@ footer{
     .description p, .description h3{
         margin-top: 10px;
         text-align: center;
-    }
-    .picture{
-        left:0;
     }
 
 }
