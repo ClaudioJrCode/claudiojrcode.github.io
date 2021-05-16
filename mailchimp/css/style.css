@@ -72,29 +72,34 @@ select {
     
 }
 .picture{
-    transition: all .5s;
-    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    position:relative;
     border-radius: 1em;
     width: 250px;
     
 
 }
 .picture:hover {
-   
-    background-position: center, center;
-    transition: all .5s;
-    transform: scale(1.20);
+    z-index: 10;
+    box-shadow: 0px 0px 75px 10px white;/*efeito de luz de led, com background-image fica melhor*/
+    transition: all 2s ease;
+    
     
     
 }
 
 .description{
+    position: relative;
+    transform: translateY(-25%);
     display: inline-block;
-    max-width: 40%;
+    max-width: 50%;
     margin-left: 40px;
     
 }
 .description p, .description h3{
+    
     text-align: left;
     margin-bottom: 20px;
 }
@@ -114,14 +119,16 @@ footer{
     border-radius: 1em;
     background-image: linear-gradient(gray,black);
 }
-@media (max-width: 800px){
+@media (max-width: 918px){
     .formContainer{
-        float: none;
-        margin: auto;
+        float:none;
+        margin-left: 50%;
+        transform: translateX(-50%);/*transform para centralizar horizontalmente*/
     }
 
     .description{
-        margin: 0;
+        transform: translateY(0);
+        margin-left: 0;
         max-width: 300px;
     }
     .description p, .description h3{
