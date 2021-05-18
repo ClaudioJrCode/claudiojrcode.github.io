@@ -63,7 +63,7 @@ header{
 }
 .section{
     margin: auto;
-   /* box-sizing:border-box;*/
+    box-sizing:border-box;
    /*background-color: brown;*/
     max-width: 1000px;
     
