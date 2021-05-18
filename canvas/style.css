@@ -1,4 +1,5 @@
 #tela{
-    background-color: indianred;
+    position: static;
+    margin: auto;
     max-width: 60vw;
 }
