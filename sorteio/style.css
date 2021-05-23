@@ -35,10 +35,25 @@ body{
 .mb{
     margin-bottom: 10px;
 }
-ul{
+#lista{
     list-style: none;
 }
 input{
     height: 25px;
     font-size:15px;
 }
+#readme{
+
+    max-width: 500px;
+    margin: auto;
+    background-color: cornsilk;
+    margin-top:15px;
+    border: solid crimson;
+    border-radius: 15px;
+    padding: 25px 25px 25px 50px;
+
+}
+#rdlist{
+    padding-left: 20px;
+}
+
