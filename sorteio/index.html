@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random para sorteio</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb">Sorteio de numeros</h1>
+        <input class="mb" id="max" type="number" placeholder="quantidade de pessoas">
+        <h3 class="mb" id="n"></h3>
+        <button class="btn mb"onclick="sortear()">Sortear</button>
+    </div>
+    <div class="container">
+        <h1 class="mb">Sorteio por Nome:</h1>
+        <input class="mb" id="txtnome"type="text" placeholder="Digite um nome:"><br>
+        <button class="btn mb"onclick="inserir()">Inserir</button>
+        <button class="btn mb"onclick="sortearNome()">Sortear</button>
+        <p class="mb">*Pressione ENTER para Inserir se preferir</p>
+    </div>
+    <div class="container"> 
+        <ul id="lista">
+            <label>
+                <h2 class="mb">Participantes do Sorteio:</h2>
+            </label>
+        </ul>
+        <h2 id ="resultado"></h2>
+    </div>
+    
+
+
+</body>
+</html>
