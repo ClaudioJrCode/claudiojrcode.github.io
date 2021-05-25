@@ -10,12 +10,14 @@ body{
     font-size: 18;
 }
 .container{
+    /*box-sizing: border-box;*/
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
     background-color: white;
-    max-width: 22em;
+    max-width: 500px;
+    width: 70vw;
     text-align: justify;
     border-radius: 15px;
     padding: 10px;
@@ -43,8 +45,8 @@ input{
     font-size:15px;
 }
 #readme{
-
     max-width: 500px;
+    width: 70vw;
     margin: auto;
     background-color: cornsilk;
     margin-top:15px;
