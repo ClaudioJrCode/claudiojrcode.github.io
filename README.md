@@ -6,3 +6,5 @@ Confere aí
 #### [Minha Primeira Pagina](https://claudiojrcode.github.io/desafio1/)
 #### [Cartão de Visita](https://claudiojrcode.github.io/desafio2/)
 #### [Formulario com Post para Mailchimp](https://claudiojrcode.github.io/mailchimp/)
+#### [Calculadora para Churrasco](https://claudiojrcode.github.io/churrascometro/)
+#### [Pagina para Sorteio](https://claudiojrcode.github.io/sorteio/)
