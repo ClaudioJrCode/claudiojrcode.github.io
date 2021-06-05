@@ -1,20 +1,19 @@
 let url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL"
-let brl = document.getElementById("valor")
-let usd = document.getElementById("resultado")
+let usd = document.getElementById("valor")
+let brl = document.getElementById("resultado")
 let res = ""
 
-function calcular(){
-fetch(url)
+async function calcular(){
+await fetch(url)
     .then((res) => {
 
         return res.json()
 
     })
     .then((data) => {
-        
-       
-        res =  data.USDBRL.high* brl.value;
+             
+        res = data.USDBRL.high* usd.value;
        
     })
-   usd.value = res;
+   brl.value = res.toFixed(2);
 }
