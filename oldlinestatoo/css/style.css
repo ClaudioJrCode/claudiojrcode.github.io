@@ -51,7 +51,7 @@ header{
 .photo:hover{
     z-index: 11;
     transition: all 1s ease;
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 .photoborder{/*contem o paragrafo e a foto*/
     margin: auto;
