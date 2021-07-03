@@ -102,20 +102,24 @@ header{
     justify-content:center;
     gap:30px;
     display:flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    
 }
 .project{
+    
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap:20px;
-    border: solid 1px #f2c21a;
+    
+    gap:15px;
+    border: solid 0.1px #f2c21a;
     padding: 10px;
     background-color: rgba(40,40,40,0.1);
     border-radius: 25px;
     width: 300px;
     height: 400px;
 }
+
 
 .study[type="range"]{
     -webkit-appearance: none;
@@ -125,7 +129,7 @@ header{
     height: 0.5em;
     position: relative;
     border-radius: 5px;
-    background-color: #f2c21a;
+    background-image: linear-gradient(to right,#f2c21a, #444);
     outline: none;
     color: #d81f1f;
 }
@@ -145,7 +149,6 @@ header{
     flex-wrap: wrap;
 }
 .game-text{
-    transform: translateY();
     align-items: center;
     max-width: 500px
 }
@@ -178,4 +181,21 @@ header{
 li:hover{
     transition: all 0.3s ease;
     opacity: 0.5;
+}
+canvas{
+    padding: 0;
+    margin: 0;
+}
+.project p{
+    font-size: 25px;
+}
+.callme {
+    text-align: center;
+    background-color:#f2c21a;
+    border-radius: 10px;
+    color: #000;
+    padding:5px;
+}
+.callme h3{
+    color: #000;
 }

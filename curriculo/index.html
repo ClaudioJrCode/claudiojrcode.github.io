@@ -14,7 +14,7 @@
         <div id='logo.container'>
             <ul class='menu'>
                 <li><img id="logo-svg" src="./assets/logo.svg" alt="" srcset="" height='30px'></li>
-                <li><span class="logo">Hire Me!</span></li>
+                <li><span class="logo">About Me</span></li>
             </ul>
         </div>
         <ul class="menu">
@@ -43,13 +43,35 @@
             </div>
             <div class='projects-container'>
                 <div class='project'>
-                    <input class="study"type="range" min="0" max="10" value="7" disabled="true"><label>HTML</label>
-                    <input class="study"type="range" min="0" max="10" value="7" disabled="true"><label>CSS</label>
-                    <input class="study"type="range" min="0" max="10" value="6" disabled="true"><label>JS</label>
-                    <input class="study"type="range" min="0" max="10" value="5" disabled="true"><label>NodeJS</label>
+                    <div>
+                        <h3 class="name">Hard Skills</h3>
+                    </div>
+                    <input class="study" type="range" min="0" max="10" value="7" disabled="true"><label>HTML</label>
+                    <input class="study" type="range" min="0" max="10" value="7" disabled="true"><label>CSS</label>
+                    <input class="study" type="range" min="0" max="10" value="6" disabled="true"><label>JS</label>
+                    <input class="study" type="range" min="0" max="10" value="5" disabled="true"><label>NodeJS</label>
+                    <input class="study" type="range" min="0" max="10" value="3" disabled="true"><label>ReactJS</label>
+
+                    <input class="study" type="range" min="0" max="10" value="3" disabled="true"><label>Python</label>
                 </div>
-                <div class='project'></div>
-                <div class='project'></div>
+                <div class='project'>
+                    <h3 class="name">Objectives</h3>
+                    
+                    <p>I'm looking for an internship opportunity in ​​FullStack development area to improve my
+                        knowledge in real cases.
+                        if you are interested</p>
+                        <br>
+                    <div class="callme">
+                        <h3>Contact Me</h3>
+                    </div>
+                    <br><br><br>
+
+                </div>
+                <div class='project'>
+                    <h3 class="name">Profile</h3>
+                    <canvas id="chart"></canvas>
+
+                </div>
             </div>
             <!--Games Begin-->
             <div class="game-content">
@@ -60,13 +82,13 @@
                     </div>
                 </a>
                 <div class="game-text">
-                    <h3>Dollixo</h3>
+                    <h3 class="name">Dollixo</h3>
                     <h5>An educational game made on Unity Engine that teaches about recycling</h5>
                 </div>
             </div>
             <div class="game-content">
                 <div class="game-text">
-                    <h3>One more Left</h3>
+                    <h3 class='name'>One more Left</h3>
                     <h5>An side-scrolling game made on Unity Engine</h5>
                 </div>
                 <a target="_blank"
@@ -79,6 +101,8 @@
             <!--Games End-->
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
