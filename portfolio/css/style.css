@@ -98,11 +98,13 @@ header{
     transform: translateY(-10px)
 }
 .projects-container{
+    width: 1200px;
     margin-top:30px;
     justify-content:center;
-    gap:30px;
+    gap:50px;
     display:flex;
     flex-wrap: wrap;
+    margin-bottom: 50px;
     
 }
 .project{
@@ -136,6 +138,7 @@ header{
 
 
 .game-content{
+    max-width: 1200px;
     border-radius: 25px;
     border: solid 1px #f2c21a;
     padding: 10px;
@@ -144,7 +147,7 @@ header{
     margin:20px;
     justify-content:center;
     align-items:center;
-    gap: 30px;
+    gap: 10px;
     display:flex;
     flex-wrap: wrap;
 }
@@ -165,14 +168,12 @@ header{
     max-width:1200px;
 }
 .gif{
-    width: 100%;
+    width:100%;
+    max-width: 500px;
     overflow: hidden;
     border-radius:25px;
 }
-.download{
-    content: 'Download';
-   
-}
+
 .download:hover{
     transition: all 0.5s ease;
     opacity: 0.4;

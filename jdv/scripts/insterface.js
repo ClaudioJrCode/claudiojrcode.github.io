@@ -22,13 +22,13 @@ function handleClick(event) {
             let winner = playerTime == 0 ? 'Circle' : 'Cross'
             alert(`${winner} Wins !!!`)
             location.reload();
-        }, 10);
+        }, 100);
     }
-    if(count == 8)
+    if(count == 8 && !gameOver)
     setTimeout(() => {
         alert(`Draw Game`)
         location.reload();
-    }, 10)
+    }, 100)
     updateBoard();
     count++;
 
