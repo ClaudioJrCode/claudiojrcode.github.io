@@ -16,6 +16,5 @@ function move(vel){
     })
 }
 chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
-    console.log(request)
     startStop(request.vel)
 })
