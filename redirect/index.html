@@ -14,7 +14,7 @@
             // Fallback após tentativa de abrir o app
             var fallbackTimeout = setTimeout(function () {
                 if (isIOS) {
-                    window.location.href = "https://apps.apple.com/app/id1234567890"; // <-- Coloque o ID real do app
+                    window.location.href = "https://apps.apple.com/app/id1632099409";
                 } else {
                     window.location.href = "https://play.google.com/store/apps/details?id=br.com.vivo.vivocasainteligente";
                 }
@@ -29,9 +29,9 @@
 
             // Tenta abrir o app via esquema
             if (isAndroid) {
-                window.location = "vivosmarthome://device/abc123";
+                window.location = "vivosmarthome://";
             } else if (isIOS) {
-                window.location = "vivosmarthome://device/abc123";
+                window.location = "vivosmarthome://";
             }
         }
 
