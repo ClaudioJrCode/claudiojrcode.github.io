@@ -5,34 +5,50 @@
     <title>Abrindo o aplicativo...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split("&");
+
+            for (const pair of pairs) {
+                if (!pair) continue;
+                const [key, value] = pair.split("=");
+                if (key && value) {
+                    params[decodeURIComponent(key)] = decodeURIComponent(value);
+                }
+            }
+
+            return params;
+        }
+
         function openApp() {
-            var userAgent = navigator.userAgent || navigator.vendor;
+            const userAgent = navigator.userAgent || navigator.vendor;
+            const isAndroid = /android/i.test(userAgent);
+            const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
 
-            var isAndroid = /android/i.test(userAgent);
-            var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+            const params = getQueryParams();
 
-            // Fallback após tentativa de abrir o app
-            var fallbackTimeout = setTimeout(function () {
+            // UTM parameters
+            const utm_source = params["utm_source"] || "";
+            const utm_medium = params["utm_medium"] || "";
+            const utm_campaign = params["utm_campaign"] || "";
+
+            const fallbackTimeout = setTimeout(function () {
                 if (isIOS) {
-                    window.location.href = "https://apps.apple.com/app/id1632099409";
+                    const iosLink = `https://apps.apple.com/app/id1632099409?pt=124541702&ct=${encodeURIComponent(utm_campaign)}&mt=8`;
+                    window.location.href = iosLink;
                 } else {
-                    window.location.href = "https://play.google.com/store/apps/details?id=br.com.vivo.vivocasainteligente";
+                    const referrer = `utm_source=${encodeURIComponent(utm_source)}&utm_medium=${encodeURIComponent(utm_medium)}&utm_content=link_direto_android&utm_campaign=${encodeURIComponent(utm_campaign)}`;
+                    const androidLink = `https://play.google.com/store/apps/details?id=br.com.vivo.vivocasainteligente&referrer=${encodeURIComponent(referrer)}`;
+                    window.location.href = androidLink;
                 }
             }, 1500);
 
-            // Detecta se o app abriu e cancela o fallback
             document.addEventListener('visibilitychange', function () {
                 if (document.visibilityState === 'hidden') {
                     clearTimeout(fallbackTimeout);
                 }
             });
-
-            // Tenta abrir o app via esquema
-            if (isAndroid) {
-                window.location = "vivosmarthome://";
-            } else if (isIOS) {
-                window.location = "vivosmarthome://";
-            }
         }
 
         window.onload = openApp;
