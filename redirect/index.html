@@ -13,10 +13,10 @@
 
             // Fallback após tentativa de abrir o app
             var fallbackTimeout = setTimeout(function () {
-                if (isAndroid) {
-                    window.location.href = "https://play.google.com/store/apps/details?id=br.com.vivo.vivocasainteligente";
-                } else if (isIOS) {
+                if (isIOS) {
                     window.location.href = "https://apps.apple.com/app/id1234567890"; // <-- Coloque o ID real do app
+                } else {
+                    window.location.href = "https://play.google.com/store/apps/details?id=br.com.vivo.vivocasainteligente";
                 }
             }, 1500);
 
