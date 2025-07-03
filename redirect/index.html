@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Abrindo o aplicativo...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function openApp() {
+            var userAgent = navigator.userAgent || navigator.vendor;
+
+            var isAndroid = /android/i.test(userAgent);
+            var isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+            // Fallback após tentativa de abrir o app
+            var fallbackTimeout = setTimeout(function () {
+                if (isAndroid) {
+                    window.location.href = "https://play.google.com/store/apps/details?id=br.com.vivo.vivocasainteligente";
+                } else if (isIOS) {
+                    window.location.href = "https://apps.apple.com/app/id1234567890"; // <-- Coloque o ID real do app
+                }
+            }, 1500);
+
+            // Detecta se o app abriu e cancela o fallback
+            document.addEventListener('visibilitychange', function () {
+                if (document.visibilityState === 'hidden') {
+                    clearTimeout(fallbackTimeout);
+                }
+            });
+
+            // Tenta abrir o app via esquema
+            if (isAndroid) {
+                window.location = "vivosmarthome://device/abc123";
+            } else if (isIOS) {
+                window.location = "vivosmarthome://device/abc123";
+            }
+        }
+
+        window.onload = openApp;
+    </script>
+</head>
+
+<body>
+    <p>Abrindo o aplicativo...</p>
+</body>
+
+</html>
